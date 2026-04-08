@@ -528,6 +528,55 @@
     }
     .ep-sig { margin-top: 28px; padding-top: 20px; border-top: 1px solid #eee; font-size: 13px; color: #555; }
     .ep-sig strong { color: #1a1a1a; display: block; margin-bottom: 2px; }
+
+    /* ── TAB NAV ── */
+    .tab-nav { background:var(--navy); border-top:1px solid rgba(255,255,255,0.07); display:flex; padding:0 48px; }
+    .tab-btn { font-family:'Manrope',sans-serif; font-size:11px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:rgba(255,255,255,0.4); padding:14px 20px; cursor:pointer; border:none; background:none; border-bottom:2.5px solid transparent; transition:color 0.18s, border-color 0.18s; }
+    .tab-btn:hover { color:rgba(255,255,255,0.7); }
+    .tab-btn.active { color:var(--gold); border-bottom-color:var(--gold); }
+
+    /* ── VIEW PANELS ── */
+    .view-panel { display:none; }
+    .view-panel.active { display:block; }
+
+    /* ── POOL TABLE VIEW ── */
+    .pool-wrap { padding:40px 48px 80px; }
+    .pool-header { margin-bottom:28px; }
+    .pool-eyebrow { display:block; font-size:11px; font-weight:700; letter-spacing:1.8px; text-transform:uppercase; color:var(--gold); margin-bottom:8px; }
+    .pool-title { font-family:'Manrope',sans-serif; font-size:26px; font-weight:800; color:var(--navy); letter-spacing:-0.5px; margin-bottom:6px; }
+    .pool-sub { font-size:13px; color:var(--muted); }
+    .pool-filters { display:flex; align-items:center; gap:8px; margin-bottom:20px; flex-wrap:wrap; }
+    .pf-label { font-size:10px; font-weight:700; letter-spacing:1px; text-transform:uppercase; color:var(--muted); margin-right:4px; }
+    .pf-btn { font-size:11px; font-weight:600; padding:5px 13px; border-radius:20px; border:1.5px solid var(--sand-d); background:var(--white); color:var(--slate); cursor:pointer; transition:all 0.15s; font-family:inherit; }
+    .pf-btn:hover { border-color:var(--navy); color:var(--navy); }
+    .pf-btn.pf-active { background:var(--navy); color:var(--gold); border-color:var(--navy); }
+    .pool-flags { display:flex; gap:12px; margin-bottom:28px; flex-wrap:wrap; }
+    .pool-flag-card { display:flex; align-items:flex-start; gap:8px; background:var(--white); border:1.5px solid #F4C0C0; border-radius:8px; padding:10px 14px; max-width:360px; }
+    .pfc-icon { font-size:14px; flex-shrink:0; margin-top:1px; }
+    .pfc-text strong { display:block; font-size:10.5px; font-weight:700; color:#9B2020; margin-bottom:2px; }
+    .pfc-text span { display:block; font-size:11px; color:var(--slate); line-height:1.5; }
+    .pool-table-wrap { background:var(--white); border-radius:12px; border:1.5px solid var(--sand-d); overflow:hidden; }
+    .pool-table { width:100%; border-collapse:collapse; }
+    .pool-table thead tr { background:var(--navy); }
+    .pool-table thead th { padding:11px 14px; text-align:left; font-size:9.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:rgba(255,255,255,0.45); white-space:nowrap; }
+    .pool-table thead th.th-num { color:rgba(255,255,255,0.25); width:40px; }
+    .tier-sep td { background:rgba(201,168,106,0.06); border-top:1px solid rgba(201,168,106,0.2); border-bottom:1px solid rgba(201,168,106,0.15); padding:7px 14px; }
+    .tier-sep-label { font-size:9.5px; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold); }
+    .tier-sep-sub { font-size:10px; color:var(--muted); margin-left:10px; }
+    .pool-table tbody tr.data-row { border-bottom:1px solid var(--sand-d); transition:background 0.12s; }
+    .pool-table tbody tr.data-row:last-child { border-bottom:none; }
+    .pool-table tbody tr.data-row:hover { background:#F7FAFC; }
+    .pool-table tbody td { padding:10px 14px; vertical-align:middle; }
+    .pt-num { font-size:11px; color:var(--muted); font-weight:600; }
+    .pt-name { font-weight:700; font-size:13px; color:var(--navy); display:block; }
+    .pt-chain { font-size:11px; color:var(--slate); display:block; margin-top:1px; }
+    .pt-title { font-size:12px; color:var(--slate); }
+    .pt-region { font-size:12px; color:var(--slate); }
+    .pt-props { font-family:'Manrope',sans-serif; font-weight:700; font-size:13px; color:var(--navy); }
+    .badge-ceo { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; background:rgba(26,107,50,0.1); color:#1A6B32; border:1px solid rgba(26,107,50,0.2); border-radius:4px; padding:2px 7px; }
+    .badge-vp  { display:inline-block; font-size:9px; font-weight:700; letter-spacing:0.8px; text-transform:uppercase; background:rgba(81,107,132,0.1); color:var(--slate); border:1px solid rgba(81,107,132,0.2); border-radius:4px; padding:2px 7px; }
+    .pt-flag { display:block; font-size:10px; color:#9B2020; background:rgba(184,80,80,0.07); border:1px solid rgba(184,80,80,0.18); border-radius:4px; padding:2px 7px; margin-top:4px; width:fit-content; }
+    .pt-note { display:block; font-size:10px; color:var(--muted); margin-top:3px; font-style:italic; }
   </style>
 </head>
 <body>
@@ -536,6 +585,13 @@
   <div class="logo">Rating<span>IQ</span></div>
   <a class="back-link" href="email-sequence-map.html">← Sequence Map</a>
 </header>
+
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="switchTab(this,'view-tree')">Sequence Tree</button>
+  <button class="tab-btn" onclick="switchTab(this,'view-pool')">Pilot Pool — 50 Contacts</button>
+</div>
+
+<div id="view-tree" class="view-panel active">
 
 <div class="hero">
   <span class="hero-label">Cold Outbound · Pilot · Full Sequence</span>
@@ -1442,6 +1498,179 @@
 
 </main>
 
+</div><!-- /view-tree -->
+
+<div id="view-pool" class="view-panel">
+  <div class="pool-wrap">
+
+    <div class="pool-header">
+      <span class="pool-eyebrow">Cold Outbound · Pilot · April 2026</span>
+      <div class="pool-title">50 Recommended Recipients</div>
+      <div class="pool-sub">Filtered: non-GDPR regions · 2–30 properties · CEO-level prioritized</div>
+    </div>
+
+    <div class="pool-flags">
+      <div class="pool-flag-card">
+        <span class="pfc-icon">⚠</span>
+        <div class="pfc-text">
+          <strong>Mangalis / ONOMO — same entity</strong>
+          <span>Both appear in the DB. Keep ONOMO (Julien Renaud, #27). Remove Mangalis before sending.</span>
+        </div>
+      </div>
+      <div class="pool-flag-card">
+        <span class="pfc-icon">⚠</span>
+        <div class="pfc-text">
+          <strong>Poli (AFI) = More by AFI</strong>
+          <span>Asaf Ben Dov listed twice with same email. Counted once as #41 — remove the duplicate row from the DB.</span>
+        </div>
+      </div>
+      <div class="pool-flag-card">
+        <span class="pfc-icon">⚠</span>
+        <div class="pfc-text">
+          <strong>Prima — existing customer</strong>
+          <span>Haim Douk flagged as current customer. Avi Dor (CEO) has email — handle separately, not as cold outreach.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="pool-filters">
+      <span class="pf-label">Filter</span>
+      <button class="pf-btn pf-active" onclick="filterPool(this,'all')">All 50</button>
+      <button class="pf-btn" onclick="filterPool(this,'ceo')">CEO-Level</button>
+      <button class="pf-btn" onclick="filterPool(this,'vp')">VP / Director</button>
+      <button class="pf-btn" onclick="filterPool(this,'usa')">USA / Canada</button>
+      <button class="pf-btn" onclick="filterPool(this,'latam')">LATAM</button>
+      <button class="pf-btn" onclick="filterPool(this,'africa')">Africa</button>
+      <button class="pf-btn" onclick="filterPool(this,'asia')">Asia / Pacific</button>
+      <button class="pf-btn" onclick="filterPool(this,'israel')">Israel</button>
+      <button class="pf-btn" onclick="filterPool(this,'gcc')">GCC</button>
+    </div>
+
+    <div class="pool-table-wrap">
+      <table class="pool-table">
+        <thead>
+          <tr>
+            <th class="th-num">#</th>
+            <th>Name &amp; Chain</th>
+            <th>Title</th>
+            <th>Region</th>
+            <th>Properties</th>
+            <th>Tier</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="tier-sep"><td colspan="6"><span class="tier-sep-label">Tier 1 — CEO / President / Founder</span><span class="tier-sep-sub">27 contacts · prioritize these</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">1</td><td><span class="pt-name">Graeme Edmond</span><span class="pt-chain">aha Hotels &amp; Lodges</span></td><td class="pt-title">CEO</td><td class="pt-region">South Africa</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">2</td><td><span class="pt-name">Roberto Amengual</span><span class="pt-chain">Amerian Hoteles</span></td><td class="pt-title">President</td><td class="pt-region">Argentina</td><td class="pt-props">~15</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">3</td><td><span class="pt-name">Mario Tricoci</span><span class="pt-chain">Aparium Hotel Group</span></td><td class="pt-title">CEO / Founder</td><td class="pt-region">USA</td><td class="pt-props">~20</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">4</td><td><span class="pt-name">Gonzalo Calderon Borja</span><span class="pt-chain">Aranwa Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">Peru</td><td class="pt-props">~5</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">5</td><td><span class="pt-name">Zyad Triki</span><span class="pt-chain">Azalai Hotels</span></td><td class="pt-title">Owner / CEO</td><td class="pt-region">West Africa</td><td class="pt-props">~10</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">6</td><td><span class="pt-name">Chieko Aoki</span><span class="pt-chain">Blue Tree Hotels</span></td><td class="pt-title">President &amp; CEO</td><td class="pt-region">Brazil</td><td class="pt-props">21</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">7</td><td><span class="pt-name">Guy Stehlik</span><span class="pt-chain">BON Hotels</span></td><td class="pt-title">Founder &amp; CEO</td><td class="pt-region">South Africa</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="asia"><td class="pt-num">8</td><td><span class="pt-name">Jose Dominic</span><span class="pt-chain">CGH Earth</span></td><td class="pt-title">MD &amp; CEO</td><td class="pt-region">India (Kerala)</td><td class="pt-props">~15</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">9</td><td><span class="pt-name">Osbourne Majuru</span><span class="pt-chain">Cresta Hotels</span></td><td class="pt-title">Group CEO</td><td class="pt-region">Southern Africa</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">10</td><td><span class="pt-name">Christiane Germain</span><span class="pt-chain">Germain Hotels</span></td><td class="pt-title">Co-President &amp; Co-Founder</td><td class="pt-region">Canada</td><td class="pt-props">~20</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">11</td><td><span class="pt-name">Francisco Medina Elizalde</span><span class="pt-chain">Grupo Hotelero Santa Fe</span></td><td class="pt-title">CEO</td><td class="pt-region">Mexico</td><td class="pt-props">26</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">12</td><td><span class="pt-name">Gary Sims</span><span class="pt-chain">Hay Creek Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">USA</td><td class="pt-props">~20</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="israel"><td class="pt-num">13</td><td><span class="pt-name">Yair Gardin</span><span class="pt-chain">Jacob Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">Israel</td><td class="pt-props">8</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">14</td><td><span class="pt-name">Jim Gordon</span><span class="pt-chain">Legacy Hotels &amp; Resorts</span></td><td class="pt-title">Founding Director</td><td class="pt-region">Southern Africa</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">15</td><td><span class="pt-name">Alvaro Nieto</span><span class="pt-chain">Movich Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">Colombia</td><td class="pt-props">8</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="asia"><td class="pt-num">16</td><td><span class="pt-name">Gaurang Jhunjhnuwala</span><span class="pt-chain">Naumi Hotels</span></td><td class="pt-title">Group CEO</td><td class="pt-region">Singapore</td><td class="pt-props">~5</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">17</td><td><span class="pt-name">Jamie Colee</span><span class="pt-chain">Noble House Hotels &amp; Resorts</span></td><td class="pt-title">CEO</td><td class="pt-region">USA</td><td class="pt-props">~20</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">18</td><td><span class="pt-name">Matt Marquis</span><span class="pt-chain">Pacifica Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">USA (California)</td><td class="pt-props">~25</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">19</td><td><span class="pt-name">Stefan Nasalski</span><span class="pt-chain">Pomeroy Lodging</span></td><td class="pt-title">President</td><td class="pt-region">Canada</td><td class="pt-props">~15</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">20</td><td><span class="pt-name">Brian Lowe</span><span class="pt-chain">Proper Hospitality</span></td><td class="pt-title">President &amp; Co-Founder</td><td class="pt-region">USA</td><td class="pt-props">~10</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">21</td><td><span class="pt-name">Katherine Durant</span><span class="pt-chain">Provenance Hotels</span></td><td class="pt-title">President &amp; CEO</td><td class="pt-region">USA (Pacific NW)</td><td class="pt-props">~12</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="latam"><td class="pt-num">22</td><td><span class="pt-name">Fernando Poma</span><span class="pt-chain">Real Hotels &amp; Resorts</span></td><td class="pt-title">Executive Director</td><td class="pt-region">Central America</td><td class="pt-props">30</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">23</td><td><span class="pt-name">Dina Belon</span><span class="pt-chain">Staypineapple</span></td><td class="pt-title">President</td><td class="pt-region">USA</td><td class="pt-props">~10</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">24</td><td><span class="pt-name">Samson Mwale</span><span class="pt-chain">Sunbird Hotels &amp; Resorts</span></td><td class="pt-title">Chief Executive</td><td class="pt-region">Malawi</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="gcc"><td class="pt-num">25</td><td><span class="pt-name">Mohamed Awadalla</span><span class="pt-chain">TIME Hotels</span></td><td class="pt-title">CEO</td><td class="pt-region">GCC</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="usa"><td class="pt-num">26</td><td><span class="pt-name">John Valencia</span><span class="pt-chain">Valencia Hotel Collection</span></td><td class="pt-title">Owner</td><td class="pt-region">USA (Texas)</td><td class="pt-props">small</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="data-row" data-tier="ceo" data-region="africa"><td class="pt-num">27</td><td><span class="pt-name">Julien Renaud</span><span class="pt-chain">ONOMO Hotels</span><span class="pt-flag">⚠ Resolve Mangalis/ONOMO duplicate first</span></td><td class="pt-title">CEO</td><td class="pt-region">Africa (Pan)</td><td class="pt-props">~15</td><td><span class="badge-ceo">CEO</span></td></tr>
+
+          <tr class="tier-sep"><td colspan="6"><span class="tier-sep-label">Tier 2 — VP / EVP / Senior Director</span><span class="tier-sep-sub">23 contacts · fill remaining slots</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">28</td><td><span class="pt-name">Paul Devitt</span><span class="pt-chain">Aparium Hotel Group</span></td><td class="pt-title">President &amp; COO</td><td class="pt-region">USA</td><td class="pt-props">~20</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="africa"><td class="pt-num">29</td><td><span class="pt-name">Mossadeck Bally</span><span class="pt-chain">Azalai Hotels</span><span class="pt-note">Same chain as #5</span></td><td class="pt-title">President</td><td class="pt-region">West Africa</td><td class="pt-props">~10</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="israel"><td class="pt-num">30</td><td><span class="pt-name">Benny Levy</span><span class="pt-chain">Aluma (Isrotel)</span></td><td class="pt-title">VP Marketing &amp; Sales</td><td class="pt-region">Israel</td><td class="pt-props">3</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">31</td><td><span class="pt-name">Gustavo Minatel</span><span class="pt-chain">Bourbon Hospitalidade</span></td><td class="pt-title">Director of Marketing</td><td class="pt-region">Brazil</td><td class="pt-props">23</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">32</td><td><span class="pt-name">Augusto Nakasone</span><span class="pt-chain">Casa Andina</span></td><td class="pt-title">Director Comercial y de Marketing</td><td class="pt-region">Peru</td><td class="pt-props">29</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="asia"><td class="pt-num">33</td><td><span class="pt-name">Shilendran M</span><span class="pt-chain">CGH Earth</span><span class="pt-note">Same chain as #8</span></td><td class="pt-title">Vice President</td><td class="pt-region">India (Kerala)</td><td class="pt-props">~15</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="asia"><td class="pt-num">34</td><td><span class="pt-name">Lynette Ermac</span><span class="pt-chain">Discovery Hospitality</span></td><td class="pt-title">SVP</td><td class="pt-region">Philippines</td><td class="pt-props">~15</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">35</td><td><span class="pt-name">Jean-Yves Germain</span><span class="pt-chain">Germain Hotels</span><span class="pt-note">Same chain as #10</span></td><td class="pt-title">Co-Founder</td><td class="pt-region">Canada</td><td class="pt-props">~20</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">36</td><td><span class="pt-name">Luis Ignacio Gómez</span><span class="pt-chain">Grupo Brisas</span></td><td class="pt-title">Sales &amp; Marketing Director</td><td class="pt-region">Mexico</td><td class="pt-props">12</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">37</td><td><span class="pt-name">Marcos Weber</span><span class="pt-chain">Grupo Hotelero Santa Fe</span><span class="pt-note">Same chain as #11</span></td><td class="pt-title">Director Corporativo de Mercadotecnia</td><td class="pt-region">Mexico</td><td class="pt-props">26</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">38</td><td><span class="pt-name">Claudia Mendez</span><span class="pt-chain">Hoteles Estelar</span></td><td class="pt-title">Corporate Marketing Director</td><td class="pt-region">Colombia</td><td class="pt-props">26</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">39</td><td><span class="pt-name">Manuela Albir</span><span class="pt-chain">Hoteles Estelar</span><span class="pt-note">Same chain as #38</span></td><td class="pt-title">EVP</td><td class="pt-region">Colombia</td><td class="pt-props">26</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">40</td><td><span class="pt-name">Antonio Villarroel</span><span class="pt-chain">INTURSA / Libertador Hotels</span></td><td class="pt-title">Corporate Commercial Manager</td><td class="pt-region">Peru</td><td class="pt-props">9</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="israel"><td class="pt-num">41</td><td><span class="pt-name">Asaf Ben Dov</span><span class="pt-chain">More by AFI</span><span class="pt-flag">⚠ Also listed as Poli (AFI) — same contact, same email</span></td><td class="pt-title">VP Sales &amp; Marketing</td><td class="pt-region">Israel</td><td class="pt-props">2</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="latam"><td class="pt-num">42</td><td><span class="pt-name">Eduardo Tovar Castro</span><span class="pt-chain">Movich Hotels</span><span class="pt-note">Same chain as #15</span></td><td class="pt-title">Marketing Director</td><td class="pt-region">Colombia</td><td class="pt-props">8</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">43</td><td><span class="pt-name">Don Dennis</span><span class="pt-chain">Noble House Hotels &amp; Resorts</span><span class="pt-note">Same chain as #17</span></td><td class="pt-title">President, Operations</td><td class="pt-region">USA</td><td class="pt-props">~20</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="africa"><td class="pt-num">44</td><td><span class="pt-name">Cedric Guilleminot</span><span class="pt-chain">ONOMO Hotels</span><span class="pt-flag">⚠ Same entity as Mangalis — resolve before sending</span></td><td class="pt-title">CEO / Director</td><td class="pt-region">Africa (Pan)</td><td class="pt-props">~15</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">45</td><td><span class="pt-name">Heather Hamilton</span><span class="pt-chain">Pomeroy Lodging</span><span class="pt-note">Same chain as #19</span></td><td class="pt-title">SVP Hotels</td><td class="pt-region">Canada</td><td class="pt-props">~15</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">46</td><td><span class="pt-name">Kimber Fleming</span><span class="pt-chain">Proper Hospitality</span><span class="pt-note">Same chain as #20</span></td><td class="pt-title">Owner</td><td class="pt-region">USA</td><td class="pt-props">~10</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="asia"><td class="pt-num">47</td><td><span class="pt-name">Thuy Nguyen</span><span class="pt-chain">Silk Path Hotels</span></td><td class="pt-title">Chief Business Officer</td><td class="pt-region">Vietnam</td><td class="pt-props">small</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="asia"><td class="pt-num">48</td><td><span class="pt-name">Nitin Kumar</span><span class="pt-chain">Spree Hospitality</span></td><td class="pt-title">AVP North &amp; East India</td><td class="pt-region">India</td><td class="pt-props">small</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="gcc"><td class="pt-num">49</td><td><span class="pt-name">Emad Farid</span><span class="pt-chain">TIME Hotels</span><span class="pt-note">Same chain as #25</span></td><td class="pt-title">VP Operations</td><td class="pt-region">GCC</td><td class="pt-props">small</td><td><span class="badge-vp">VP</span></td></tr>
+
+          <tr class="data-row" data-tier="vp" data-region="usa"><td class="pt-num">50</td><td><span class="pt-name">Harley Dobney</span><span class="pt-chain">Valencia Hotel Collection</span><span class="pt-note">Same chain as #26</span></td><td class="pt-title">Founder</td><td class="pt-region">USA (Texas)</td><td class="pt-props">small</td><td><span class="badge-vp">VP</span></td></tr>
+
+        </tbody>
+      </table>
+    </div><!-- /pool-table-wrap -->
+
+  </div><!-- /pool-wrap -->
+</div><!-- /view-pool -->
+
 <footer>
   <span>RatingIQ</span> · Cold Outbound Pilot · E1–E4 Full Sequence Tree · April 2026
 </footer>
@@ -1786,6 +2015,27 @@
       btn.style.cssText = 'position:absolute;top:10px;right:14px;background:none;border:none;font-size:14px;color:#999;cursor:pointer;z-index:10;';
       btn.addEventListener('click', closeAll);
       o.appendChild(btn);
+    });
+  }
+
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.view-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  function filterPool(btn, filter) {
+    document.querySelectorAll('.pf-btn').forEach(b => b.classList.remove('pf-active'));
+    btn.classList.add('pf-active');
+    document.querySelectorAll('.pool-table .data-row').forEach(row => {
+      if (filter === 'all') {
+        row.style.display = '';
+      } else if (filter === 'ceo' || filter === 'vp') {
+        row.style.display = row.dataset.tier === filter ? '' : 'none';
+      } else {
+        row.style.display = row.dataset.region === filter ? '' : 'none';
+      }
     });
   }
 </script>
